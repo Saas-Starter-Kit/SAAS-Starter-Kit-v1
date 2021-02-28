@@ -38,15 +38,13 @@ export const createTodo = async (title, description, author, app_id) => {
 };
 
 const clearAppDb = async () => {
-  let text1 = `DELETE FROM roles`;
-  let text2 = `DELETE FROM todos`;
+  let text1 = `DELETE FROM todos`;
+  let text2 = `DELETE FROM users`;
   let text3 = `DELETE FROM apps`;
-  let text4 = `DELETE FROM users`;
 
   await db.query(text1);
   await db.query(text2);
   await db.query(text3);
-  await db.query(text4);
 };
 
 afterEach(() => {
@@ -65,12 +63,12 @@ describe('GET Todo info /get/todos', () => {
 describe('POST API Todo /post/todo', () => {
   it('create new todo', async () => {
     let app = await createApp('app2');
-    await createUser('email2@example.com', 'user2');
+    await createUser('email2@example.com', 'user2356');
 
     let res = await request.post('/api/post/todo').send({
       title: 'example',
       description: 'working',
-      author: 'user2',
+      author: 'user2356',
       app_id: app.app_id
     });
     expect(res.status).toEqual(200);
