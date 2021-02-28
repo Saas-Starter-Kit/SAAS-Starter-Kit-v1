@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ProSaasCard from '../../../components/Common/ProSaasCard';
 
 const MachineLearning = () => {

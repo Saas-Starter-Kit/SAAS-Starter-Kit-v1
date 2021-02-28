@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from 'react';
+import React, { useReducer, useEffect } from 'react';
 
 import '../styles/globals.css';
 import 'antd/dist/antd.css';
@@ -10,9 +10,6 @@ import { Login, Logout } from '../store/actions/actions';
 import ApiContext from './apiContext';
 import { apiReducer, initialStateApi } from '../store/reducers/apiReducer';
 import { Fetch_failure, Fetch_init, Fetch_success } from '../store/actions/actions';
-
-import CaslContext from './caslContext';
-import { ability } from './caslAbility';
 
 import { firebaseApp as firebase } from '../services/firebase';
 import { ThemeProvider } from 'styled-components';
@@ -53,9 +50,7 @@ const RootWrapper = ({ children }) => {
   return (
     <AuthContext.Provider value={{ authState, LogIn, LogOut, firebase }}>
       <ApiContext.Provider value={{ apiState, fetchFailure, fetchInit, fetchSuccess }}>
-        <CaslContext.Provider value={ability}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
-        </CaslContext.Provider>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </ApiContext.Provider>
     </AuthContext.Provider>
   );
