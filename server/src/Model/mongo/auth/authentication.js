@@ -3,7 +3,7 @@ const objectId = mongoose.Types.ObjectId;
 import { Users } from '../../../Database/mongo/models.js';
 
 export const getUser = async (email) => {
-  return await Users.findOne({ email: email }).lean();
+  return await Users.findOne({ email }).lean();
 };
 
 export const saveUsertoDB = async (email, username, firebaseId) => {

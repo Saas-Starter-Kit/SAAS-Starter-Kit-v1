@@ -3,7 +3,7 @@ import express from 'express';
 //initialize libraries
 import './Config/dotenv.js';
 import './Config/firebase.js';
-//import './Database/mongo/db.js';
+import './Database/mongo/db.js';
 import './Database/sql/db.js';
 
 import cors from 'cors';

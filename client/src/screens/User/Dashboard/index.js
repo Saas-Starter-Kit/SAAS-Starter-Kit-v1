@@ -101,6 +101,7 @@ const Dashboard = () => {
       fetchFailure(err);
     });
 
+    console.log(result);
     let apps = result.data;
 
     setApps(apps);
@@ -122,6 +123,7 @@ const Dashboard = () => {
     await axios.post(`/api/post/app`, data).catch((err) => {
       fetchFailure(err);
     });
+
     fetchSuccess();
     getApps();
   };

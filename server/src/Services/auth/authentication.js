@@ -6,7 +6,7 @@ import {
   getUser,
   updateUsernameModel,
   updateEmailModel
-} from '../../Model/sql/auth/authentication.js';
+} from '../../Model/mongo/auth/authentication.js';
 
 export const SignUp = async (req, res) => {
   let token = req.body.token;
