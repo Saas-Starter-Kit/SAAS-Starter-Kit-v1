@@ -157,9 +157,6 @@ const IconButton = styled(Badge)`
   border-radius: 24px;
   cursor: pointer;
   margin-right: 0.5rem;
-  & + .iconButton {
-    margin-left: 8px;
-  }
 `;
 
 const IconFont = styled(IoNotificationsOutline)`
@@ -195,9 +192,10 @@ const AppHeader = ({
     navigate('/auth/login');
   };
 
+  /* eslint-disable */
   return (
     <div>
-      <LayoutHeader id="layoutHeader" collapsed={collapsed} theme={theme}>
+      <LayoutHeader id="layoutHeader" theme={theme}>
         <CollapseButton onClick={onCollapseChange} theme={theme}>
           {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
         </CollapseButton>
@@ -234,6 +232,7 @@ const AppHeader = ({
               </Notification>
             }
           >
+            {/* eslint-disable-next-line max-len */}
             <IconButton count={notifications.length} offset={[-10, 10]}>
               <IconFont />
             </IconButton>

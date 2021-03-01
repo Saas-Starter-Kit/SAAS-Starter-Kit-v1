@@ -101,7 +101,7 @@ const Users = () => {
               title="Actions"
               key="action"
               render={(row) => (
-                <RemoveUserButton onClick={() => removeUserRole(row.role_id)}>
+                <RemoveUserButton key={row.role_id} onClick={() => removeUserRole(row.role_id)}>
                   Remove
                 </RemoveUserButton>
               )}

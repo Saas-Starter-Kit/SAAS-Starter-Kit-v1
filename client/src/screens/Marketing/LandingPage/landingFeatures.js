@@ -169,7 +169,7 @@ const LandingFeatures = () => (
                 <StyledApproval />
               </ImageWrapper>
               <TextWrapper>
-                <SmallHeader>Sub Feature 1</SmallHeader>
+                <SmallHeader>Benefit of Feature 1</SmallHeader>
                 <SmallParagraph>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit
                   perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
@@ -183,7 +183,7 @@ const LandingFeatures = () => (
                 <StyledBarChart />
               </ImageWrapper>
               <TextWrapper>
-                <SmallHeader>Sub Feature 2</SmallHeader>
+                <SmallHeader>Benefit of Feature 2</SmallHeader>
                 <SmallParagraph>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit
                   perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
@@ -209,7 +209,7 @@ const LandingFeatures = () => (
                 <StyledCollect />
               </ImageWrapper>
               <TextWrapper>
-                <SmallHeader>Sub Feature 1</SmallHeader>
+                <SmallHeader>Benefit of Feature 1</SmallHeader>
                 <SmallParagraph>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit
                   perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
@@ -223,7 +223,7 @@ const LandingFeatures = () => (
                 <StyledCall />
               </ImageWrapper>
               <TextWrapper>
-                <SmallHeader>Sub Feature 2</SmallHeader>
+                <SmallHeader>Benefit of Feature 2</SmallHeader>
                 <SmallParagraph>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit
                   perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
