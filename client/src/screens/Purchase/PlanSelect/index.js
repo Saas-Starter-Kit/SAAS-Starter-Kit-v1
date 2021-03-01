@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { colors, breakpoints } from '../../../styles/theme';
@@ -103,7 +103,7 @@ const PlanSelect = () => {
       <PurchaseText>Main Benefit of product</PurchaseText>
       <CardsWrapper>
         <PlanCard
-          isActive={plan == basic_plan}
+          isActive={plan === basic_plan}
           onClick={() => selectPlan(basic_plan, basic_price, basic_type)}
         >
           <PlanHeader>Basic Plan</PlanHeader>
@@ -118,7 +118,7 @@ const PlanSelect = () => {
           </FeaturesWrapper>
         </PlanCard>
         <PlanCard
-          isActive={plan == premium_plan}
+          isActive={plan === premium_plan}
           onClick={() => selectPlan(premium_plan, premium_price, premium_type)}
         >
           <PlanHeader>Premium Plan</PlanHeader>

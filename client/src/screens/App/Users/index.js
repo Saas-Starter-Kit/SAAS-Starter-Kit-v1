@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Spin, message } from 'antd';
+import { Spin } from 'antd';
 import { Table } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 
@@ -43,7 +43,7 @@ const dummyData = [
 ];
 
 const Users = () => {
-  const [appUsers, setUsers] = useState(dummyData);
+  const [appUsers, _] = useState(dummyData); // eslint-disable-line
 
   const isLoading = false;
   const handleSubmit = async () => {};

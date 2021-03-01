@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import AuthContext from '../../../utils/authContext';

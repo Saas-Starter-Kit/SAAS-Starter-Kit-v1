@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
 
@@ -18,10 +18,11 @@ const Title = styled.h1`
 const SubscriptionSettings = () => {
   const [isModalSub, setModalSub] = useState(false);
 
-  //stripe payment state
+  /* eslint-disable */
   const [subscriptionState, setSubscription] = useState();
   const [planType, setPlanType] = useState();
   const [price, setPrice] = useState();
+  /* eslint-enable */
 
   /* 
       Stripe Methods

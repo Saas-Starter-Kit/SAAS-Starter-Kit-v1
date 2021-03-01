@@ -1,15 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { colors, breakpoints } from '../../../styles/theme';
-import {
-  FcDoughnutChart,
-  FcCurrencyExchange,
-  FcBullish,
-  FcInvite,
-  FcSerialTasks,
-  FcTimeline
-} from 'react-icons/fc';
+import { colors } from '../../../styles/theme';
+import { FcCurrencyExchange, FcBullish, FcInvite, FcSerialTasks, FcTimeline } from 'react-icons/fc';
 
 const Container = styled.div`
   position: absolute;
@@ -88,12 +81,6 @@ const StyledTimeline = styled(FcTimeline)`
 `;
 
 const StyledPrice = styled(FcCurrencyExchange)`
-  width: 4rem;
-  height: 4rem;
-  padding-left: 0.5rem;
-`;
-
-const StyledChart = styled(FcDoughnutChart)`
   width: 4rem;
   height: 4rem;
   padding-left: 0.5rem;

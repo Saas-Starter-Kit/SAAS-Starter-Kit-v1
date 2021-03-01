@@ -21,9 +21,11 @@ const Signup = () => {
   const { fetchFailure, fetchInit, fetchSuccess, apiState } = useContext(ApiContext);
   const { isLoading } = apiState;
 
+  /* eslint-disable */
   useEffect(() => {
     return () => fetchSuccess();
   }, []);
+  /* eslint-enable */
 
   const handleSubmit = async (values) => {
     fetchInit();

@@ -1,13 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { Formik } from 'formik';
 import { Link } from 'gatsby';
-import { useLocation } from '@reach/router';
 
 import AuthContext from '../../../utils/authContext';
 import ApiContext from '../../../utils/apiContext';
 import { LoginAuth } from '../helpers';
-import { colors, breakpoints, fieldStyles } from '../../../styles/theme';
+import { colors } from '../../../styles/theme';
 
 import ErrorText from '../../../components/Common/errorText';
 import InputWrapper from '../../../components/Common/forms/TextInputWrapper';
@@ -51,9 +50,11 @@ const Login = () => {
   const { fetchFailure, fetchInit, fetchSuccess, apiState } = useContext(ApiContext);
   const { isLoading } = apiState;
 
+  /* eslint-disable */
   useEffect(() => {
     return () => fetchSuccess();
   }, []);
+  /* eslint-enable */
 
   const handleSubmit = async (values) => {
     fetchInit();

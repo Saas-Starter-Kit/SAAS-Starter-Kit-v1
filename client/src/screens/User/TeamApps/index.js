@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -34,7 +34,7 @@ const DummyData = [
 ];
 
 const TeamApps = () => {
-  const [teamApps, setTeamApps] = useState(DummyData);
+  const [teamApps, setTeamApps] = useState(DummyData); //eslint-disable-line
 
   return (
     <div>

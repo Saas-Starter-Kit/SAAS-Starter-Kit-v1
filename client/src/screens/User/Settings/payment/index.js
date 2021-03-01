@@ -16,10 +16,11 @@ const Title = styled.h1`
 const PaymentSettings = () => {
   const [isModalCard, setModalCard] = useState(false);
 
-  //stripe payment state
+  /* eslint-disable */
   const [deletePaymentId, setDeletePaymentId] = useState();
   const [payCards, setPayCards] = useState([]);
   const [paymentRemoved, setPaymentRemoved] = useState(false);
+  /* eslint-enable */
 
   /* 
       Stripe Methods

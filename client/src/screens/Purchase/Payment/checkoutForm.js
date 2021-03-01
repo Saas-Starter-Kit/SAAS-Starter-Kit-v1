@@ -1,13 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import styled from 'styled-components';
-import { useLocation } from '@reach/router';
 import { FaRegCreditCard } from 'react-icons/fa';
 import { navigate } from 'gatsby';
 import { Spin } from 'antd';
 
-import AuthContext from '../../../utils/authContext';
 import ApiContext from '../../../utils/apiContext';
-import axios from '../../../services/axios';
 import { colors, breakpoints } from '../../../styles/theme';
 
 import Button from '../../../components/Common/buttons/PrimaryButton';
@@ -120,15 +117,14 @@ const StyledHr = styled.hr`
 `;
 
 const CheckoutForm = () => {
-  const location = useLocation();
-  const { authState } = useContext(AuthContext);
-  const { fetchFailure, fetchInit, fetchSuccess, apiState } = useContext(ApiContext);
+  const { fetchInit, fetchSuccess, apiState } = useContext(ApiContext);
   const { isLoading } = apiState;
-  const [plan, setPlan] = useState();
-  const [price, setPrice] = useState();
-  const [planType, setPlanType] = useState();
+
+  const [price, _] = useState(); // eslint-disable-line
+  const [planType, __] = useState(); // eslint-disable-line
   const [payCards, setPayCards] = useState([]);
 
+  /* eslint-disable */
   useEffect(() => {
     return () => fetchSuccess();
   }, []);
@@ -136,6 +132,7 @@ const CheckoutForm = () => {
   useEffect(() => {
     getWallet();
   }, []);
+  /* eslint-disable */
 
   const getWallet = async () => {
     fetchInit();
@@ -172,7 +169,7 @@ const CheckoutForm = () => {
       <PaymentInfo>
         <Spin tip="Loading" spinning={isLoading}>
           <h2>Please Choose Payment Method</h2>
-          {!payCards.length == 0 ? (
+          {!payCards.length === 0 ? (
             payCards.map((item) => (
               <StyledCardDisplayWrapper key={item.id}>
                 <StyledCardDisplay>
