@@ -37,7 +37,7 @@ const Container = styled.div`
   }
 `;
 
-const LargeHeader = styled.h4`
+const LargeHeader = styled.h2`
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 800;
@@ -62,7 +62,7 @@ const TextWrapper = styled.div`
   margin-left: 1rem;
 `;
 
-const SmallHeader = styled.h5`
+const SmallHeader = styled.h3`
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-weight: 500;
@@ -78,8 +78,10 @@ const SmallParagraph = styled.p`
 
 const FeatureImage = styled.img`
   width: 100%;
+  height: ${({ aspectRatio }) => `calc(100% * ${aspectRatio})`};
   @media (min-width: ${breakpoints.large}) {
     width: 90%;
+    height: ${({ aspectRatio }) => `calc(90% * ${aspectRatio})`};
   }
   margin-left: auto;
   margin-right: auto;
@@ -210,7 +212,11 @@ const CoreFeature3 = () => (
             </ListItem>
           </List>
         </div>
-        <FeatureImage width="490" src={image1} alt="" />
+        <FeatureImage
+          src={image1}
+          alt="Abstract illustration of man wearing a turtleneck standing next to floating graphs and images"
+          aspectRatio={438 / 343}
+        />
       </FeatureWrapper1>
       <FeatureWrapper2>
         <FeatureWrapper2b>
@@ -250,7 +256,11 @@ const CoreFeature3 = () => (
             </ListItem>
           </List>
         </FeatureWrapper2b>
-        <FeatureImage width="490" src={image2} alt="" />
+        <FeatureImage
+          src={image2}
+          alt="Abstract illustration of man wearing a suit standing next to floating graphs and images"
+          aspectRatio={438 / 306}
+        />
       </FeatureWrapper2>
     </Wrapper>
   </Container>
