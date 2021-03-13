@@ -27,9 +27,10 @@ const LogoWrapper = styled.div`
 const Logo = styled.img`
   cursor: pointer;
   height: 2rem;
-  width: auto;
+  width: calc(2rem * 43 / 40);
   @media (min-width: ${breakpoints.small}) {
     height: 2.5rem;
+    width: calc(2.5rem * 43 / 40);
   }
 `;
 
