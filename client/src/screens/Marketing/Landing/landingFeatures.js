@@ -8,8 +8,7 @@ import { FcApproval, FcBarChart, FcCollect, FcConferenceCall } from 'react-icons
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.backgroundLanding};
-  margin-left: auto;
-  margin-right: auto;
+
   padding: 4rem 1rem 4rem 1rem;
   @media (min-width: ${breakpoints.small}) {
     padding-left: 1.5rem;
@@ -17,7 +16,6 @@ const Container = styled.div`
   }
   @media (min-width: ${breakpoints.large}) {
     padding: 6rem 2rem 6rem 2rem;
-    max-width: 1280px;
   }
 `;
 
