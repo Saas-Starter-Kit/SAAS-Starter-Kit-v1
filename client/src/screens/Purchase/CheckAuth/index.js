@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import AuthContext from '../../../utils/authContext';
-import { breakpoints } from '../../../styles/theme';
+import { colors, breakpoints } from '../../../styles/theme';
 
 import Card from '../../../components/Purchase/purchaseCard';
 
@@ -28,6 +28,10 @@ const StyledSection = styled.div`
   font-weight: 500;
 `;
 
+const StyledLink = styled(Link)`
+  color: ${colors.indigo600};
+`;
+
 const CheckAuth = () => {
   const { authState } = useContext(AuthContext);
 
@@ -49,22 +53,22 @@ const CheckAuth = () => {
         <Card>
           <StyledSection>
             <div>Continue To Plan Select</div>
-            <Link to="/purchase/plan">Submit</Link>
+            <StyledLink to="/purchase/plan">Submit</StyledLink>
           </StyledSection>
           <StyledSection>
             <div>See Subscription Exists Page</div>
-            <Link to="/subscriptionexists">Submit</Link>
+            <StyledLink to="/subscriptionexists">Submit</StyledLink>
           </StyledSection>
           <StyledHeader>Please Sign-in or Sign-up to continue</StyledHeader>
           <StyledSection>
             <div>Already Have an account? login below</div>
-            <Link to="/auth/login" state={{ isPaymentFlow: true }}>
+            <StyledLink to="/auth/login" state={{ isPaymentFlow: true }}>
               Login
-            </Link>
+            </StyledLink>
           </StyledSection>
           <StyledSection>
             <div>Need to create an account? click below</div>
-            <Link to="/auth/signup">Signup</Link>
+            <StyledLink to="/auth/signup">Signup</StyledLink>
           </StyledSection>
         </Card>
       </CardWrapper>

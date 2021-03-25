@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   height: 3rem;
-  width: auto;
+  width: calc(3rem * 164 / 150);
 `;
 
 const Header = () => {

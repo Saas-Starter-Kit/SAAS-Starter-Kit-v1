@@ -86,18 +86,21 @@ const Signup = () => {
                 />
               </InputWrapper>
               {errors.email && touched.email && <ErrorText>{errors.email}</ErrorText>}
-              <Label htmlFor="username">First and Last Name:</Label>
-              <InputWrapper>
-                <Input
-                  type="text"
-                  name="username"
-                  id="username"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.username}
-                  data-test-id="username"
-                />
-              </InputWrapper>
+              <Label htmlFor="username">
+                First and Last Name:
+                <InputWrapper>
+                  <Input
+                    type="text"
+                    name="username"
+                    id="username"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.username}
+                    data-test-id="username"
+                  />
+                </InputWrapper>
+              </Label>
+
               {errors.username && touched.username && <ErrorText>{errors.username}</ErrorText>}
               <Label htmlFor="password">Password:</Label>
               <InputWrapper>
