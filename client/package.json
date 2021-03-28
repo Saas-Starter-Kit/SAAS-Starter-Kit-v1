@@ -27,6 +27,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
     "react-perfect-scrollbar": "^1.5.8",
+    "recharts": "^2.0.9",
     "styled-components": "^5.2.1",
     "yup": "^0.32.9"
   },
