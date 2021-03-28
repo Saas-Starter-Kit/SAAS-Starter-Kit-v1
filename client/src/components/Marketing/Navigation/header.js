@@ -8,7 +8,7 @@ import FlyoutMenu from './flyoutMenu';
 
 import Button from '../../Common/buttons/PrimaryButton';
 import MobileMenu from './mobileMenu';
-import SmallLogo from '../../../assets/images/logo/small_logo.svg';
+import LargeLogo from '../../../components/Common/svgs/LargeLogo';
 import MenuImageSrc from '../../../assets/images/icons/menu.svg';
 import ChevronDown from '../../../assets/images/icons/chevron-down.svg';
 
@@ -21,16 +21,6 @@ const LogoWrapper = styled.div`
   @media (min-width: ${breakpoints.large}) {
     width: 0;
     flex: 1 1 0%;
-  }
-`;
-
-const Logo = styled.img`
-  cursor: pointer;
-  height: 2rem;
-  width: calc(2rem * 43 / 40);
-  @media (min-width: ${breakpoints.small}) {
-    height: 2.5rem;
-    width: calc(2.5rem * 43 / 40);
   }
 `;
 
@@ -182,7 +172,7 @@ const Header = () => {
       <Container2>
         <LogoWrapper>
           <Link to="/">
-            <Logo src={SmallLogo} alt="Logo" />
+            <LargeLogo />
           </Link>
         </LogoWrapper>
         <MenuWrapper ref={refMobile}>
