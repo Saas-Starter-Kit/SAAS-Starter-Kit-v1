@@ -126,19 +126,10 @@ const StyledSider = styled(Layout.Sider)`
 
 const LogoWrapper = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 0 24px;
   height: 72px;
   box-shadow: 0 1px 9px -3px rgba(0, 0, 0, 0.2);
-`;
-
-const StyledLargeLogo = styled(LargeLogo)`
-  width: 150px;
-`;
-
-const StyledSmallLogo = styled(SmallLogo)`
-  width: 36px;
 `;
 
 const SidebarItems = styled.div`
@@ -216,9 +207,9 @@ const SidebarDesktop = ({ theme, toggleTheme, app_id, location, collapsed }) => 
     >
       <LogoWrapper>
         {collapsed ? (
-          <StyledSmallLogo />
+          <SmallLogo />
         ) : (
-          <StyledLargeLogo textColor={theme === THEMES.DARK ? colors.white : colors.indigo400} />
+          <LargeLogo textColor={theme === THEMES.DARK ? colors.white : colors.blueZodiac} />
         )}
       </LogoWrapper>
       <SidebarItems>

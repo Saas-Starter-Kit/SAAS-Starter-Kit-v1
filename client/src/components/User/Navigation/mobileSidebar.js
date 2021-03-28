@@ -6,7 +6,7 @@ import MobileSidebarItem from './mobileSidebarItem';
 import Cross from '../svgs/cross';
 import Home from '../svgs/home';
 import Persons from '../svgs/persons';
-import LargeLogo from '../../../assets/images/logo/large_logo.svg';
+import LargeLogo from '../../../components/Common/svgs/LargeLogo';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -98,11 +98,6 @@ const LogoWrapper = styled.div`
   padding-right: 1rem;
 `;
 
-const Logo = styled.img`
-  height: 2rem;
-  width: auto;
-`;
-
 const Nav = styled.nav`
   margin-top: 1.25rem;
   padding-left: 0.5rem;
@@ -130,7 +125,7 @@ const SidebarMobile = ({ toggleMobileMenu }) => {
         </ButtonWrapper>
         <Sidebar>
           <LogoWrapper>
-            <Logo src={LargeLogo} alt="Workflow" />
+            <LargeLogo textColor={colors.white} />
           </LogoWrapper>
           <Nav>
             <MobileSidebarItem
